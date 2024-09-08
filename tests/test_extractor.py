@@ -45,10 +45,10 @@ class TestJsonExtractor(unittest.TestCase):
 
     def test_extract_all_valid_json(self):
         test_cases = [
-            # ('Response: some text\n {"resp": "valid"} and some text', [{"resp": "valid"}]),
+            ('Response: some text\n {"resp": "valid"} and some text', [{"resp": "valid"}]),
             ('Response: some text\n {"resp": "valid"} and some text\n {"resp": "valid2"}', [{"resp": "valid"}, {"resp": "valid2"}]),
-            # ('Response: some text\n {"resp": "valid"} and some text\n {"resp": "valid2"} and some text', [{"resp": "valid"}, {"resp": "valid2"}]),
-            # ('Response: some text\n with no valid json', []),
+            ('Response: some text\n {"resp": "valid"} and some text\n {"resp": "valid2"} and some text', [{"resp": "valid"}, {"resp": "valid2"}]),
+            ('Response: some text\n with no valid json', []),
         ]
 
         for input_str, expected in test_cases:
